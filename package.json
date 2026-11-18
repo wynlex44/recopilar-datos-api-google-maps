@@ -1,0 +1,19 @@
+{
+  "name": "api-maps-rutas-florencia",
+  "version": "2.0.0",
+  "description": "Recolección automática de tiempos de viaje con Google Routes API para construir una red vial ponderada por tráfico.",
+  "main": "scheduler.js",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node scheduler.js",
+    "once": "node index.js",
+    "check": "node --check index.js && node --check scheduler.js && node --check src/config.js && node --check src/utils.js && node --check src/googleRoutesService.js && node --check src/storageService.js && node --check src/analysisService.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
